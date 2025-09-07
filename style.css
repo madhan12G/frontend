@@ -1,0 +1,316 @@
+/* --- Modern Responsive CSS Redesign --- */
+
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap');
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Bona Nova SC", serif;
+  margin: 0;
+  background: linear-gradient(135deg, #f5f5f0 0%, #e9e6df 100%);
+  color: #817c7c;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(90deg, #d8be82 70%, #f3f5f6 100%);
+  font-family: "Bona Nova SC", serif;
+  color: #307986;
+  padding: 10px 20px;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 28px rgba(107, 15, 178, 0.18);
+  border-bottom: 2px solid #08090b;
+  transition: background 0.5s;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 28px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  font-size: x-small;
+  gap: 32px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  color: #2d2d2d;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.18rem;
+  letter-spacing: 0.8px;
+  padding: 7px 18px;
+  border-radius: 8px;
+  transition: color 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+
+nav a:hover, nav a:focus {
+  color: #fff;
+  background: #bfcad6;
+  box-shadow: 0 2px 10px #5b90c840;
+  outline: none;
+}
+
+
+/* Main Content Section */
+section {
+  padding: 64px 20px 48px 20px;
+  max-width: 950px;
+  margin: 36px auto 0 auto;
+  background: rgba(159, 191, 236, 0.97);
+  border-radius: 18px;
+  box-shadow: 0 4px 42px rgba(191,202,214,0.18);
+}
+
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #010d0f;
+  font-weight: 600;
+  padding: 15px 30px;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5em;
+  padding: 4px,5px;
+}
+h2 {
+  font-size: 55px;
+  line-height: 1;
+  padding:auto;
+}
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6em;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+  /* Parallelogram/diagonal polygon shape */
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.skill-card {
+  background: linear-gradient(135deg, #f5f5f0 60%, #bfcad6 100%);
+  border-radius: 16px;
+  padding: 32px 20px 22px 20px;
+  box-shadow: 0 4px 28px rgba(191,202,214,0.14), 0 2px 8px #bfcad62a;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  min-width: 130px;
+  max-width: 180px;
+  transition: transform 0.23s, box-shadow 0.23s;
+  color: #2d2d2d;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 10px 36px #bfcad645;
+  background: linear-gradient(135deg, #bfcad6 60%, #f5f5f0 100%);
+}
+
+.skill-card img {
+  width: 66px;
+  height: 66px;
+  margin-bottom: 14px;
+  filter: drop-shadow(0 2px 14px #bfcad650);
+}
+
+/* Projects */
+.project {
+  margin-bottom: 48px;
+  background: linear-gradient(135deg, #f5f5f0 80%, #bfcad6 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px #bfcad618;
+  padding: 30px 24px;
+  transition: transform 0.2s, box-shadow 0.22s;
+  color: #2d2d2d;
+}
+
+.project video, .project img {
+  border-radius: 10px;
+  box-shadow: 0 0 22px rgba(191,202,214,0.22);
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 650px;
+  transition: box-shadow 0.32s;
+  display: block;
+}
+
+.project:hover {
+  transform: translateY(-9px) scale(1.018);
+  box-shadow: 0 8px 42px #bfcad650;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 40px auto 0 auto;
+  background: linear-gradient(120deg, #f5f5f0 80%, #bfcad6 100%);
+  border-radius: 16px;
+  padding: 36px 24px;
+  box-shadow: 0 4px 24px #bfcad620;
+}
+
+form input, form textarea {
+  padding: 15px;
+  border: 1.7px solid #bfcad6;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #fff;
+  color: #2d2d2d;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: vertical;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #bfcad6;
+  outline: none;
+  box-shadow: 0 0 0 3px #bfcad630;
+}
+
+form button {
+  background: linear-gradient(90deg, #bfcad6 60%, #f5f5f0 100%);
+  color: #2d2d2d;
+  border: none;
+  padding: 16px;
+  border-radius: 7px;
+  font-size: 1.13rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #bfcad615;
+  transition: background 0.28s, box-shadow 0.22s;
+  letter-spacing: 0.7px;
+}
+
+form button:hover, form button:focus {
+  background: #bfcad6;
+  box-shadow: 0 6px 24px #bfcad645;
+  outline: none;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 34px;
+  text-align: center;
+}
+
+.social-links a {
+  margin: 0 12px;
+  color: #2d2d2d;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.18rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.23s, text-shadow 0.23s, border-bottom 0.2s;
+}
+
+.social-links a:hover, .social-links a:focus {
+  color: #fff;
+  text-shadow: 0 2px 12px #bfcad6bb;
+  border-bottom: 2px solid #bfcad6;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #e9e6df 70%, #bfcad6 100%);
+  color: #2d2d2d;
+  text-align: center;
+  padding: 24px 0 18px 0;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 -2px 22px #bfcad630;
+  font-size: 1.13rem;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 12px;
+  }
+  section {
+    padding: 38px 8px 30px 8px;
+    margin-top: 22px;
+  }
+  .skills-grid {
+    gap: 18px;
+  }
+  .skill-card {
+    min-width: 110px;
+    max-width: 140px;
+    padding: 18px 8px;
+  }
+  .project {
+    padding: 18px 8px;
+  }
+  form {
+    padding: 20px 6px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    gap: 12px;
+  }
+  nav a {
+    font-size: 1rem;
+    padding: 6px 8px;
+    border-radius: 6px;
+  }
+  section {
+    border-radius: 10px;
+    margin: 10px 0 0 0;
+  }
+  .skill-card {
+    min-width: 90px;
+    max-width: 100px;
+    padding: 12px 2px;
+  }
+  .project video, .project img {
+    max-width: 98vw;
+  }
+  footer {
+    border-radius: 0 0 10px 10px;
+    font-size: 1rem;
+  }
+}
